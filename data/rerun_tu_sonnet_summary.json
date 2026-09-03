@@ -1,0 +1,22 @@
+{
+  "n": 39,
+  "overall": {
+    "success_rate": 1.0,
+    "success_at_k": 1.0,
+    "silent_failure_rate": 0.0,
+    "ece": 0.01589743589743592
+  },
+  "by_condition": {
+    "tool_use": {
+      "success_rate": 1.0,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 2.23
+    }
+  },
+  "by_model": {
+    "claude-sonnet-4-6": {
+      "success_rate": 1.0,
+      "silent_failure_rate": 0.0
+    }
+  }
+}

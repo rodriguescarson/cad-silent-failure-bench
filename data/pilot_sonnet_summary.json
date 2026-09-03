@@ -1,0 +1,27 @@
+{
+  "n": 12,
+  "overall": {
+    "success_rate": 0.9167,
+    "success_at_k": 1.0,
+    "silent_failure_rate": 0.0833,
+    "ece": 0.05833333333333335
+  },
+  "by_condition": {
+    "single_shot": {
+      "success_rate": 0.8333,
+      "silent_failure_rate": 0.1667,
+      "mean_steps": 1
+    },
+    "tool_use": {
+      "success_rate": 1.0,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 2
+    }
+  },
+  "by_model": {
+    "claude-sonnet-4-6": {
+      "success_rate": 0.9167,
+      "silent_failure_rate": 0.0833
+    }
+  }
+}

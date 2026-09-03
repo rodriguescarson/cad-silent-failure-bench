@@ -1,0 +1,32 @@
+{
+  "n": 117,
+  "overall": {
+    "success_rate": 0.4957,
+    "success_at_k": 0.7436,
+    "silent_failure_rate": 0.094,
+    "ece": 0.340188679245283
+  },
+  "by_condition": {
+    "multi_agent": {
+      "success_rate": 0.3846,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 2.85
+    },
+    "single_shot": {
+      "success_rate": 0.4615,
+      "silent_failure_rate": 0.0769,
+      "mean_steps": 1
+    },
+    "tool_use": {
+      "success_rate": 0.641,
+      "silent_failure_rate": 0.2051,
+      "mean_steps": 3.15
+    }
+  },
+  "by_model": {
+    "deepseek/deepseek-v3.2": {
+      "success_rate": 0.4957,
+      "silent_failure_rate": 0.094
+    }
+  }
+}

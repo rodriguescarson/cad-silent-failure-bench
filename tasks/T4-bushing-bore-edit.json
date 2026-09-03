@@ -1,0 +1,87 @@
+{
+  "id": "T4-bushing-bore-edit",
+  "tier": 4,
+  "title": "Edit: enlarge bushing bore under a volume cap",
+  "units": "mm",
+  "nl_spec": "Below is existing build123d code for a plain bushing. Enlarge the bore from \u00d820 mm to \u00d824 mm while keeping the outside diameter (30 mm) and length (40 mm) unchanged. The edited part's material volume must not exceed 13,000 mm^3.\n\n```python\nfrom build123d import BuildPart, Cylinder, Mode\n\nwith BuildPart() as bushing:\n    Cylinder(radius=15, height=40)\n    Cylinder(radius=10, height=40, mode=Mode.SUBTRACT)\n\nresult = bushing.part\n```",
+  "tags": [
+    "edit",
+    "bushing",
+    "constraint",
+    "mass-cap"
+  ],
+  "reference_solution": "tasks/ref_solutions/T4-bushing-bore-edit.py",
+  "checks": [
+    {
+      "id": "od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 30,
+      "tol": 0.4,
+      "desc": "OD unchanged"
+    },
+    {
+      "id": "length",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 40,
+      "tol": 0.4,
+      "desc": "length unchanged"
+    },
+    {
+      "id": "new_bore",
+      "kind": "cylinder_count",
+      "radius": 12,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "enlarged \u00d824 bore present",
+      "height": 40,
+      "height_tol": 1.0
+    },
+    {
+      "id": "old_bore_gone",
+      "kind": "cylinder_count",
+      "radius": 10,
+      "radius_tol": 0.3,
+      "target": 0,
+      "desc": "original \u00d820 bore must be gone"
+    },
+    {
+      "id": "volume_cap",
+      "kind": "range",
+      "property": "volume",
+      "lo": 9000,
+      "hi": 13000,
+      "desc": "volume <= 13,000 mm^3 (global constraint)"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

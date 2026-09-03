@@ -1,0 +1,99 @@
+{
+  "id": "T2-stepped-pin",
+  "tier": 2,
+  "title": "Three-step pin",
+  "units": "mm",
+  "nl_spec": "Model a stepped cylindrical pin with three coaxial sections, end to end: \u00d812 mm for 20 mm, then \u00d810 mm for 25 mm, then \u00d88 mm for 15 mm. Total length 60 mm.",
+  "tags": [
+    "pin",
+    "stepped",
+    "multi-feature",
+    "rotating"
+  ],
+  "reference_solution": "tasks/ref_solutions/T2-stepped-pin.py",
+  "checks": [
+    {
+      "id": "length",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 60,
+      "tol": 0.4,
+      "desc": "overall length"
+    },
+    {
+      "id": "max_dia",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 12,
+      "tol": 0.3,
+      "desc": "largest diameter"
+    },
+    {
+      "id": "step1",
+      "kind": "cylinder_count",
+      "radius": 6,
+      "radius_tol": 0.25,
+      "target": 1,
+      "desc": "\u00d812 section",
+      "height": 20,
+      "height_tol": 1.0
+    },
+    {
+      "id": "step2",
+      "kind": "cylinder_count",
+      "radius": 5,
+      "radius_tol": 0.25,
+      "target": 1,
+      "desc": "\u00d810 section",
+      "height": 25,
+      "height_tol": 1.0
+    },
+    {
+      "id": "step3",
+      "kind": "cylinder_count",
+      "radius": 4,
+      "radius_tol": 0.25,
+      "target": 1,
+      "desc": "\u00d88 section",
+      "height": 15,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 4581,
+      "hi": 5377,
+      "desc": "volume within \u00b18% of nominal 4979 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

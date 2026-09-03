@@ -1,0 +1,12 @@
+# Core eval framework runs on the standard library alone (see scripts/dry_run.py).
+# These are needed only for REAL geometry + REAL model runs:
+
+build123d>=0.7        # CAD-as-code kernel (pulls OCP / OpenCascade) — used by benchmark/_extract.py
+anthropic>=0.40       # --provider anthropic ; needs ANTHROPIC_API_KEY
+openai>=2.40          # --provider openai (OPENAI_API_KEY) or openrouter (OPENROUTER_API_KEY)
+
+# dev
+pytest>=8
+
+# NOTE: pin exact versions before a paper run (results are a dated snapshot). Record the build123d
+# + OCP versions and each model id/date in the results header.

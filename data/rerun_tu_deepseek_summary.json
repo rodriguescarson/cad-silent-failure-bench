@@ -1,0 +1,22 @@
+{
+  "n": 39,
+  "overall": {
+    "success_rate": 0.5385,
+    "success_at_k": 0.7692,
+    "silent_failure_rate": 0.0513,
+    "ece": 0.279
+  },
+  "by_condition": {
+    "tool_use": {
+      "success_rate": 0.5385,
+      "silent_failure_rate": 0.0513,
+      "mean_steps": 3.26
+    }
+  },
+  "by_model": {
+    "deepseek/deepseek-v3.2": {
+      "success_rate": 0.5385,
+      "silent_failure_rate": 0.0513
+    }
+  }
+}

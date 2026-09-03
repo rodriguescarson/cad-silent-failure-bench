@@ -1,0 +1,90 @@
+{
+  "id": "T1-plate-4holes",
+  "tier": 1,
+  "title": "Square mounting plate with four fastener holes",
+  "units": "mm",
+  "nl_spec": "Model a square mounting plate, 80 mm x 80 mm, 8 mm thick, with four \u00d89 mm fastener holes arranged in a 50 mm x 50 mm square pattern centred on the plate (each hole centre 25 mm from the plate centre along both axes).",
+  "tags": [
+    "plate",
+    "single-feature",
+    "hole-pattern"
+  ],
+  "reference_solution": "tasks/ref_solutions/T1-plate-4holes.py",
+  "checks": [
+    {
+      "id": "side_x",
+      "kind": "approx",
+      "property": "bbox_x",
+      "target": 80,
+      "tol": 0.5,
+      "desc": "plate side X"
+    },
+    {
+      "id": "side_y",
+      "kind": "approx",
+      "property": "bbox_y",
+      "target": 80,
+      "tol": 0.5,
+      "desc": "plate side Y"
+    },
+    {
+      "id": "thickness",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 8,
+      "tol": 0.2,
+      "desc": "thickness"
+    },
+    {
+      "id": "holes",
+      "kind": "bolt_circle",
+      "radius": 4.5,
+      "radius_tol": 0.3,
+      "target": 4,
+      "pcd": 70.71,
+      "pcd_tol": 1.0,
+      "desc": "4x \u00d89 on the 50x50 square pattern (diagonal PCD 70.71)",
+      "height": 8,
+      "height_tol": 1.0,
+      "center_tol": 1.5,
+      "ang_tol": 8.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 45231,
+      "hi": 53097,
+      "desc": "volume within \u00b18% of nominal 49164 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

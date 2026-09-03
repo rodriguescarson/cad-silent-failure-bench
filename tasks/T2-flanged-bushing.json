@@ -1,0 +1,106 @@
+{
+  "id": "T2-flanged-bushing",
+  "tier": 2,
+  "title": "Flanged bushing",
+  "units": "mm",
+  "nl_spec": "Model a flanged bushing: a circular flange of diameter 60 mm and thickness 6 mm at the base, with a coaxial cylindrical hub of outside diameter 30 mm extending above it so that the overall length is 30 mm. A \u00d820 mm bore passes through the entire part. All features are coaxial.",
+  "tags": [
+    "bushing",
+    "flange",
+    "multi-feature"
+  ],
+  "reference_solution": "tasks/ref_solutions/T2-flanged-bushing.py",
+  "checks": [
+    {
+      "id": "flange_od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 60,
+      "tol": 0.4,
+      "desc": "flange diameter"
+    },
+    {
+      "id": "length",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 30,
+      "tol": 0.4,
+      "desc": "overall length"
+    },
+    {
+      "id": "bore",
+      "kind": "cylinder_count",
+      "radius": 10,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d820 through-bore (single contiguous cylinder)",
+      "height": 30,
+      "height_tol": 1.0
+    },
+    {
+      "id": "hub",
+      "kind": "cylinder_count",
+      "radius": 15,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d830 hub outer surface",
+      "height": 24,
+      "height_tol": 1.0
+    },
+    {
+      "id": "flange_rim",
+      "kind": "cylinder_count",
+      "radius": 30,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d860 flange rim",
+      "height": 6,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 22544,
+      "hi": 26464,
+      "desc": "volume within \u00b18% of nominal 24504 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    },
+    {
+      "id": "flange_low",
+      "kind": "approx",
+      "property": "com_off_z",
+      "target": -6.23,
+      "tol": 1.0,
+      "desc": "flange at the base, hub above"
+    }
+  ]
+}

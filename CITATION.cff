@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or its records, please cite the paper."
+title: "Done Is Not Correct: Measuring Silent Failures and Self-Verification Calibration When LLM Agents Take CAD Actions (benchmark v1.0)"
+version: "1.0"
+date-released: "2026-09-03"
+license: MIT
+authors:
+  - family-names: Rodrigues
+    given-names: Carson
+    orcid: "https://orcid.org/0009-0001-7195-6742"
+    affiliation: Celabe
+  - family-names: Rodrigues
+    given-names: Clive
+    affiliation: Hochschule Coburg, University of Applied Sciences
+  - family-names: Reddy G
+    given-names: Aravind
+repository-code: "https://github.com/rodriguescarson/cad-silent-failure-bench"

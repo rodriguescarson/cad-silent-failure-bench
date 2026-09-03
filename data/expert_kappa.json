@@ -1,0 +1,118 @@
+{
+  "as_scored": {
+    "n": 81,
+    "raw_agreement": 0.8272,
+    "kappa": 0.6425,
+    "both_pass": 24,
+    "expert_pass_grader_fail": 13,
+    "expert_fail_grader_pass": 1,
+    "both_fail": 43
+  },
+  "excluding_ambiguous_lbracket_task": {
+    "n": 62,
+    "raw_agreement": 0.9355,
+    "kappa": 0.8681,
+    "both_pass": 24,
+    "expert_pass_grader_fail": 4,
+    "expert_fail_grader_pass": 0,
+    "both_fail": 34
+  },
+  "imputed_if_expert_rejudges": {
+    "n": 81,
+    "raw_agreement": 0.9506,
+    "kappa": 0.8892,
+    "both_pass": 25,
+    "expert_pass_grader_fail": 4,
+    "expert_fail_grader_pass": 0,
+    "both_fail": 52
+  },
+  "n_disagreements": 14,
+  "n_disagreements_on_lbracket": 10,
+  "disagreements": [
+    {
+      "item": "002",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "003",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "004",
+      "task": "T2-counterbore-plate",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "007",
+      "task": "T2-counterbore-plate",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "009",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "010",
+      "task": "T1-washer",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "025",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "039",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "040",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "057",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "060",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "074",
+      "task": "T2-stepped-shaft",
+      "expert": "pass",
+      "grader_pass": false
+    },
+    {
+      "item": "076",
+      "task": "T2-lbracket",
+      "expert": "fail",
+      "grader_pass": true
+    },
+    {
+      "item": "079",
+      "task": "T2-lbracket",
+      "expert": "pass",
+      "grader_pass": false
+    }
+  ],
+  "note": "Primary = as_scored (kappa=0.64, substantial). Sensitivity = excluding_ambiguous_lbracket_task (real labels, one task dropped). imputed_* is informational, not a reported agreement. See notes/lbracket-spec-decision.md."
+}

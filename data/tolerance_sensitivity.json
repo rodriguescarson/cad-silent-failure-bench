@@ -1,0 +1,227 @@
+{
+ "population": "primary_population.jsonl",
+ "n": 468,
+ "factors": {
+  "0.25": {
+   "single_shot": {
+    "n": 156,
+    "success": 89,
+    "silent": 33,
+    "claims": 153,
+    "claim_pass": 87,
+    "valid_claims": 120,
+    "success_rate": 0.5705,
+    "silent_rate": 0.2115,
+    "claim_precision": 0.5686,
+    "silent_given_valid_claim": 0.275
+   },
+   "tool_use": {
+    "n": 156,
+    "success": 109,
+    "silent": 17,
+    "claims": 126,
+    "claim_pass": 109,
+    "valid_claims": 126,
+    "success_rate": 0.6987,
+    "silent_rate": 0.109,
+    "claim_precision": 0.8651,
+    "silent_given_valid_claim": 0.1349
+   },
+   "multi_agent": {
+    "n": 156,
+    "success": 84,
+    "silent": 14,
+    "claims": 89,
+    "claim_pass": 75,
+    "valid_claims": 89,
+    "success_rate": 0.5385,
+    "silent_rate": 0.0897,
+    "claim_precision": 0.8427,
+    "silent_given_valid_claim": 0.1573
+   },
+   "ss_minus_tu_silent_pp": 10.26,
+   "mcnemar_silent_ss_vs_tu": {
+    "removed": 18,
+    "created": 2,
+    "p": 0.0004024505615234375
+   }
+  },
+  "0.5": {
+   "single_shot": {
+    "n": 156,
+    "success": 100,
+    "silent": 22,
+    "claims": 153,
+    "claim_pass": 98,
+    "valid_claims": 120,
+    "success_rate": 0.641,
+    "silent_rate": 0.141,
+    "claim_precision": 0.6405,
+    "silent_given_valid_claim": 0.1833
+   },
+   "tool_use": {
+    "n": 156,
+    "success": 121,
+    "silent": 5,
+    "claims": 126,
+    "claim_pass": 121,
+    "valid_claims": 126,
+    "success_rate": 0.7756,
+    "silent_rate": 0.0321,
+    "claim_precision": 0.9603,
+    "silent_given_valid_claim": 0.0397
+   },
+   "multi_agent": {
+    "n": 156,
+    "success": 96,
+    "silent": 4,
+    "claims": 89,
+    "claim_pass": 85,
+    "valid_claims": 89,
+    "success_rate": 0.6154,
+    "silent_rate": 0.0256,
+    "claim_precision": 0.9551,
+    "silent_given_valid_claim": 0.0449
+   },
+   "ss_minus_tu_silent_pp": 10.9,
+   "mcnemar_silent_ss_vs_tu": {
+    "removed": 18,
+    "created": 1,
+    "p": 7.62939453125e-05
+   }
+  },
+  "1.0": {
+   "single_shot": {
+    "n": 156,
+    "success": 100,
+    "silent": 22,
+    "claims": 153,
+    "claim_pass": 98,
+    "valid_claims": 120,
+    "success_rate": 0.641,
+    "silent_rate": 0.141,
+    "claim_precision": 0.6405,
+    "silent_given_valid_claim": 0.1833
+   },
+   "tool_use": {
+    "n": 156,
+    "success": 121,
+    "silent": 5,
+    "claims": 126,
+    "claim_pass": 121,
+    "valid_claims": 126,
+    "success_rate": 0.7756,
+    "silent_rate": 0.0321,
+    "claim_precision": 0.9603,
+    "silent_given_valid_claim": 0.0397
+   },
+   "multi_agent": {
+    "n": 156,
+    "success": 96,
+    "silent": 4,
+    "claims": 89,
+    "claim_pass": 85,
+    "valid_claims": 89,
+    "success_rate": 0.6154,
+    "silent_rate": 0.0256,
+    "claim_precision": 0.9551,
+    "silent_given_valid_claim": 0.0449
+   },
+   "ss_minus_tu_silent_pp": 10.9,
+   "mcnemar_silent_ss_vs_tu": {
+    "removed": 18,
+    "created": 1,
+    "p": 7.62939453125e-05
+   },
+   "sanity_mismatch_vs_stored_passed": 0
+  },
+  "2.0": {
+   "single_shot": {
+    "n": 156,
+    "success": 102,
+    "silent": 20,
+    "claims": 153,
+    "claim_pass": 100,
+    "valid_claims": 120,
+    "success_rate": 0.6538,
+    "silent_rate": 0.1282,
+    "claim_precision": 0.6536,
+    "silent_given_valid_claim": 0.1667
+   },
+   "tool_use": {
+    "n": 156,
+    "success": 121,
+    "silent": 5,
+    "claims": 126,
+    "claim_pass": 121,
+    "valid_claims": 126,
+    "success_rate": 0.7756,
+    "silent_rate": 0.0321,
+    "claim_precision": 0.9603,
+    "silent_given_valid_claim": 0.0397
+   },
+   "multi_agent": {
+    "n": 156,
+    "success": 96,
+    "silent": 4,
+    "claims": 89,
+    "claim_pass": 85,
+    "valid_claims": 89,
+    "success_rate": 0.6154,
+    "silent_rate": 0.0256,
+    "claim_precision": 0.9551,
+    "silent_given_valid_claim": 0.0449
+   },
+   "ss_minus_tu_silent_pp": 9.62,
+   "mcnemar_silent_ss_vs_tu": {
+    "removed": 16,
+    "created": 1,
+    "p": 0.000274658203125
+   }
+  },
+  "4.0": {
+   "single_shot": {
+    "n": 156,
+    "success": 107,
+    "silent": 15,
+    "claims": 153,
+    "claim_pass": 105,
+    "valid_claims": 120,
+    "success_rate": 0.6859,
+    "silent_rate": 0.0962,
+    "claim_precision": 0.6863,
+    "silent_given_valid_claim": 0.125
+   },
+   "tool_use": {
+    "n": 156,
+    "success": 121,
+    "silent": 5,
+    "claims": 126,
+    "claim_pass": 121,
+    "valid_claims": 126,
+    "success_rate": 0.7756,
+    "silent_rate": 0.0321,
+    "claim_precision": 0.9603,
+    "silent_given_valid_claim": 0.0397
+   },
+   "multi_agent": {
+    "n": 156,
+    "success": 96,
+    "silent": 4,
+    "claims": 89,
+    "claim_pass": 85,
+    "valid_claims": 89,
+    "success_rate": 0.6154,
+    "silent_rate": 0.0256,
+    "claim_precision": 0.9551,
+    "silent_given_valid_claim": 0.0449
+   },
+   "ss_minus_tu_silent_pp": 6.41,
+   "mcnemar_silent_ss_vs_tu": {
+    "removed": 11,
+    "created": 1,
+    "p": 0.00634765625
+   }
+  }
+ }
+}

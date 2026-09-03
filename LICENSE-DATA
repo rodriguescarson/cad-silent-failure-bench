@@ -1,0 +1,8 @@
+The task specifications (tasks/*.json), reference solutions (tasks/ref_solutions/), attempt
+records and transcripts (data/), measured properties, the expert scoring sheet, figures, and the
+viewer assets (site/) are released under the Creative Commons Attribution 4.0 International
+licence (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+Attribution: Rodrigues, C., Rodrigues, C., and Reddy G, A. (2026). Done Is Not Correct: Measuring
+Silent Failures and Self-Verification Calibration When LLM Agents Take CAD Actions. Benchmark
+v1.0. https://github.com/rodriguescarson/cad-silent-failure-bench

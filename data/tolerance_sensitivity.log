@@ -1,0 +1,23 @@
+executed 25 unique codes
+executed 50 unique codes
+executed 75 unique codes
+executed 100 unique codes
+executed 125 unique codes
+executed 150 unique codes
+executed 175 unique codes
+executed 200 unique codes
+executed 225 unique codes
+executed 250 unique codes
+executed 275 unique codes
+executed 300 unique codes
+executed 325 unique codes
+executed 350 unique codes
+executed 375 unique codes
+executed 400 unique codes
+executed 402 new unique codes; cache holds 402
+factor 0.25: single_shot silent 33/156 success 89, tool_use silent 17/156 success 109, multi_agent silent 14/156 success 84 | SS-TU 10.26 pp, McNemar p=0.0004
+factor 0.5: single_shot silent 22/156 success 100, tool_use silent 5/156 success 121, multi_agent silent 4/156 success 96 | SS-TU 10.9 pp, McNemar p=7.6e-05
+factor 1.0: single_shot silent 22/156 success 100, tool_use silent 5/156 success 121, multi_agent silent 4/156 success 96 | SS-TU 10.9 pp, McNemar p=7.6e-05 | sanity mismatches 0
+factor 2.0: single_shot silent 20/156 success 102, tool_use silent 5/156 success 121, multi_agent silent 4/156 success 96 | SS-TU 9.62 pp, McNemar p=0.00027
+factor 4.0: single_shot silent 15/156 success 107, tool_use silent 5/156 success 121, multi_agent silent 4/156 success 96 | SS-TU 6.41 pp, McNemar p=0.0063
+wrote data/tolerance_sensitivity.json and figures/tab_tolerance.tex

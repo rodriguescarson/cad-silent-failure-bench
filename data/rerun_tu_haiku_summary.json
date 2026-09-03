@@ -1,0 +1,22 @@
+{
+  "n": 39,
+  "overall": {
+    "success_rate": 0.6154,
+    "success_at_k": 0.7692,
+    "silent_failure_rate": 0.0256,
+    "ece": 0.10178571428571428
+  },
+  "by_condition": {
+    "tool_use": {
+      "success_rate": 0.6154,
+      "silent_failure_rate": 0.0256,
+      "mean_steps": 2.97
+    }
+  },
+  "by_model": {
+    "claude-haiku-4-5": {
+      "success_rate": 0.6154,
+      "silent_failure_rate": 0.0256
+    }
+  }
+}

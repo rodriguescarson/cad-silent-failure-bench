@@ -1,0 +1,32 @@
+{
+  "n": 117,
+  "overall": {
+    "success_rate": 0.9744,
+    "success_at_k": 1.0,
+    "silent_failure_rate": 0.0171,
+    "ece": 0.026837606837606852
+  },
+  "by_condition": {
+    "multi_agent": {
+      "success_rate": 0.9487,
+      "silent_failure_rate": 0.0256,
+      "mean_steps": 1.05
+    },
+    "single_shot": {
+      "success_rate": 0.9744,
+      "silent_failure_rate": 0.0256,
+      "mean_steps": 1
+    },
+    "tool_use": {
+      "success_rate": 1.0,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 2.03
+    }
+  },
+  "by_model": {
+    "claude-sonnet-4-6": {
+      "success_rate": 0.9744,
+      "silent_failure_rate": 0.0171
+    }
+  }
+}

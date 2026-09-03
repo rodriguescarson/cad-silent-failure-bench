@@ -1,0 +1,89 @@
+{
+  "id": "T2-stepped-shaft",
+  "tier": 2,
+  "title": "Stepped shaft with two bearing seats",
+  "units": "mm",
+  "nl_spec": "Model a stepped cylindrical shaft, total length 120 mm along its axis. The central section is diameter 40 mm and 80 mm long. At each end there is a bearing seat of diameter 30 mm and 20 mm long. All sections are coaxial.",
+  "tags": [
+    "shaft",
+    "stepped",
+    "multi-feature",
+    "rotating"
+  ],
+  "reference_solution": "tasks/ref_solutions/T2-stepped-shaft.py",
+  "checks": [
+    {
+      "id": "length",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 120,
+      "tol": 0.5,
+      "desc": "overall length"
+    },
+    {
+      "id": "max_dia",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 40,
+      "tol": 0.4,
+      "desc": "central \u00d840"
+    },
+    {
+      "id": "central",
+      "kind": "cylinder_count",
+      "radius": 20,
+      "radius_tol": 0.4,
+      "target": 1,
+      "desc": "central journal",
+      "height": 80,
+      "height_tol": 1.0
+    },
+    {
+      "id": "seats",
+      "kind": "cylinder_count",
+      "radius": 15,
+      "radius_tol": 0.4,
+      "target": 2,
+      "desc": "two \u00d830 bearing seats",
+      "height": 20,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 118501,
+      "hi": 139109,
+      "desc": "volume within \u00b18% of nominal 128805 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "T1-flange-6bolt",
+  "tier": 1,
+  "title": "Six-bolt pipe flange",
+  "units": "mm",
+  "nl_spec": "Model a circular pipe flange. Outer diameter 120 mm. A concentric through bore of diameter 40 mm. Six bolt holes of diameter 11 mm, equally spaced on a 95 mm bolt circle (PCD), passing fully through. Plate thickness 14 mm. No hub.",
+  "tags": [
+    "flange",
+    "holes",
+    "single-feature"
+  ],
+  "reference_solution": "tasks/ref_solutions/T1-flange-6bolt.py",
+  "checks": [
+    {
+      "id": "od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 120,
+      "tol": 0.5,
+      "desc": "outer diameter"
+    },
+    {
+      "id": "thickness",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 14,
+      "tol": 0.2,
+      "desc": "plate thickness"
+    },
+    {
+      "id": "bore",
+      "kind": "cylinder_count",
+      "radius": 20,
+      "radius_tol": 0.4,
+      "target": 1,
+      "desc": "\u00d840 center bore",
+      "height": 14,
+      "height_tol": 1.0
+    },
+    {
+      "id": "bolts",
+      "kind": "bolt_circle",
+      "radius": 5.5,
+      "radius_tol": 0.4,
+      "pcd": 95,
+      "pcd_tol": 1.0,
+      "target": 6,
+      "desc": "6\u00d7 \u00d811 on 95 PCD",
+      "height": 14,
+      "height_tol": 1.0,
+      "center_tol": 1.5,
+      "ang_tol": 8.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 122140,
+      "hi": 143382,
+      "desc": "volume within \u00b18% of nominal 132761 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

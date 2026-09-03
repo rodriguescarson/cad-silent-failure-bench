@@ -1,0 +1,78 @@
+{
+  "id": "T1-collar",
+  "tier": 1,
+  "title": "Shaft collar",
+  "units": "mm",
+  "nl_spec": "Model a plain shaft collar: outside diameter 45 mm, bore diameter 25 mm, width 15 mm.",
+  "tags": [
+    "collar",
+    "single-feature",
+    "annular"
+  ],
+  "reference_solution": "tasks/ref_solutions/T1-collar.py",
+  "checks": [
+    {
+      "id": "od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 45,
+      "tol": 0.4,
+      "desc": "outside diameter"
+    },
+    {
+      "id": "width",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 15,
+      "tol": 0.2,
+      "desc": "width"
+    },
+    {
+      "id": "bore",
+      "kind": "cylinder_count",
+      "radius": 12.5,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d825 bore",
+      "height": 15,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 15174,
+      "hi": 17812,
+      "desc": "volume within \u00b18% of nominal 16493 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

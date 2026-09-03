@@ -1,0 +1,286 @@
+{
+ "n_primary": 468,
+ "n_exploratory": 64,
+ "by_condition_primary": {
+  "single_shot": {
+   "n": 156,
+   "success": 0.641,
+   "success_wilson": [
+    0.5632,
+    0.7121
+   ],
+   "success_cluster_ci": [
+    0.5062,
+    0.7756
+   ],
+   "silent": 0.141,
+   "silent_count": 22,
+   "silent_wilson": [
+    0.095,
+    0.2043
+   ],
+   "silent_cluster_ci": [
+    0.0577,
+    0.2436
+   ],
+   "claim_rate": 0.9808,
+   "claim_precision": 0.6405,
+   "silent_given_valid_claim": 0.1833,
+   "n_valid_claims": 120,
+   "auroc_pooled": 0.634,
+   "mean_in_tokens": 211,
+   "mean_out_tokens": 735
+  },
+  "tool_use": {
+   "n": 156,
+   "success": 0.7756,
+   "success_wilson": [
+    0.704,
+    0.834
+   ],
+   "success_cluster_ci": [
+    0.6603,
+    0.8782
+   ],
+   "silent": 0.0321,
+   "silent_count": 5,
+   "silent_wilson": [
+    0.0138,
+    0.0728
+   ],
+   "silent_cluster_ci": [
+    0.0,
+    0.0769
+   ],
+   "claim_rate": 0.8077,
+   "claim_precision": 0.9603,
+   "silent_given_valid_claim": 0.0397,
+   "n_valid_claims": 126,
+   "auroc_pooled": 0.71,
+   "mean_in_tokens": 2821,
+   "mean_out_tokens": 1549
+  },
+  "multi_agent": {
+   "n": 156,
+   "success": 0.6154,
+   "success_wilson": [
+    0.5371,
+    0.6881
+   ],
+   "success_cluster_ci": [
+    0.4936,
+    0.7372
+   ],
+   "silent": 0.0256,
+   "silent_count": 4,
+   "silent_wilson": [
+    0.01,
+    0.0641
+   ],
+   "silent_cluster_ci": [
+    0.0,
+    0.0769
+   ],
+   "claim_rate": 0.5705,
+   "claim_precision": 0.9551,
+   "silent_given_valid_claim": 0.0449,
+   "n_valid_claims": 89,
+   "auroc_pooled": 0.831,
+   "mean_in_tokens": 2279,
+   "mean_out_tokens": 2787
+  }
+ },
+ "auroc_per_model": {
+  "claude-haiku-4-5": {
+   "single_shot": 0.722,
+   "tool_use": 0.979,
+   "multi_agent": 0.991
+  },
+  "claude-sonnet-4-6": {
+   "single_shot": 0.925,
+   "tool_use": null,
+   "multi_agent": 1.0
+  },
+  "deepseek/deepseek-v3.2": {
+   "single_shot": 0.652,
+   "tool_use": 0.833,
+   "multi_agent": 0.925
+  },
+  "qwen/qwen3.7-max": {
+   "single_shot": 0.654,
+   "tool_use": 0.5,
+   "multi_agent": 0.547
+  }
+ },
+ "mcnemar_success_ss_vs_tool_use": {
+  "fixed_by": 25,
+  "broken_by": 4,
+  "p": 0.000104
+ },
+ "mcnemar_silent_ss_vs_tool_use": {
+  "created": 1,
+  "removed": 18,
+  "p": 7.6e-05
+ },
+ "mcnemar_success_ss_vs_multi_agent": {
+  "fixed_by": 16,
+  "broken_by": 20,
+  "p": 0.617719
+ },
+ "mcnemar_silent_ss_vs_multi_agent": {
+  "created": 1,
+  "removed": 19,
+  "p": 4e-05
+ },
+ "silent_diff_ss_minus_tu_ci": [
+  0.0385,
+  0.1923
+ ],
+ "ma_decomposition": {
+  "n_episodes": 156,
+  "n_failed": 60,
+  "crash": 53,
+  "silent": 4,
+  "withheld_wrong_valid": 3,
+  "false_rejection": 11
+ },
+ "checker_auroc_valid_solid_only": 0.677,
+ "checker_auroc_valid_n": {
+  "n": 103,
+  "neg": 7
+ },
+ "cds": {
+  "mean_pass": 0.1053,
+  "mean_fail_invalid": 0.518,
+  "mean_fail_valid": 0.1069,
+  "n_pass": 96,
+  "n_fail_invalid": 53,
+  "n_fail_valid": 7,
+  "mannwhitney_p": 6.664386407557336e-16,
+  "auroc_as_failure_predictor": 0.864
+ },
+ "silent_by_task": {
+  "T1-bushing": {
+   "n": 36,
+   "silent": 0
+  },
+  "T1-collar": {
+   "n": 36,
+   "silent": 0
+  },
+  "T1-flange-6bolt": {
+   "n": 36,
+   "silent": 0
+  },
+  "T1-plate-4holes": {
+   "n": 36,
+   "silent": 2
+  },
+  "T1-washer": {
+   "n": 36,
+   "silent": 0
+  },
+  "T2-counterbore-plate": {
+   "n": 36,
+   "silent": 6
+  },
+  "T2-flanged-bushing": {
+   "n": 36,
+   "silent": 4
+  },
+  "T2-lbracket": {
+   "n": 36,
+   "silent": 13
+  },
+  "T2-pulley-blank": {
+   "n": 36,
+   "silent": 2
+  },
+  "T2-stepped-pin": {
+   "n": 36,
+   "silent": 2
+  },
+  "T2-stepped-shaft": {
+   "n": 36,
+   "silent": 2
+  },
+  "T4-bushing-bore-edit": {
+   "n": 36,
+   "silent": 0
+  },
+  "T4-flange-8bolt-edit": {
+   "n": 36,
+   "silent": 0
+  }
+ },
+ "gee_pass_": {
+  "C(condition, Treatment('single_shot'))[T.multi_agent]": {
+   "coef": -0.149,
+   "p": 0.58904
+  },
+  "C(condition, Treatment('single_shot'))[T.tool_use]": {
+   "coef": 0.836,
+   "p": 0.00014
+  }
+ },
+ "gee_silent": {
+  "C(condition, Treatment('single_shot'))[T.multi_agent]": {
+   "coef": -1.837,
+   "p": 0.02506
+  },
+  "C(condition, Treatment('single_shot'))[T.tool_use]": {
+   "coef": -1.607,
+   "p": 0.00144
+  }
+ },
+ "ablation_claim_contract": {
+  "legacy_silent": 10,
+  "legacy_n": 78,
+  "fixed_silent": 3,
+  "fixed_n": 78,
+  "fisher_p": 0.07883,
+  "legacy_success": 0.4744,
+  "fixed_success": 0.5769
+ },
+ "tool_use_protocol_sensitivity": {
+  "old": {
+   "n": 143,
+   "success": 0.7902,
+   "silent": 21
+  },
+  "new": {
+   "n": 156,
+   "success": 0.7756,
+   "silent": 5
+  }
+ },
+ "oracle_hardening": {
+  "n_regraded": 519,
+  "pass_to_fail": 18,
+  "fail_to_pass": 0,
+  "new_silent_exposed": 17
+ },
+ "secondary_old_protocol": {},
+ "exploratory_partial": {
+  "openai/gpt-5.5": {
+   "single_shot": {
+    "n": 22,
+    "success": 0.8182,
+    "silent": 1,
+    "claim_rate": 1.0
+   },
+   "tool_use": {
+    "n": 21,
+    "success": 1.0,
+    "silent": 0,
+    "claim_rate": 1.0
+   },
+   "multi_agent": {
+    "n": 21,
+    "success": 1.0,
+    "silent": 0,
+    "claim_rate": 1.0
+   }
+  }
+ }
+}

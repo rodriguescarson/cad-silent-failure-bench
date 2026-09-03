@@ -1,0 +1,21 @@
+\begin{tabular}{llrrrrrr}
+\toprule
+Model & Condition & $n$ & Success & Silent & Conf. & ECE & Steps \\
+\midrule
+claude-haiku-4-5 & single-shot & 39 & 46\% & 21\% & 0.93 & 0.498 & 1.0 \\
+claude-haiku-4-5 & tool-use & 39 & 62\% & 3\% & 0.93 & 0.102 & 3.0 \\
+claude-haiku-4-5 & multi-agent & 39 & 41\% & 0\% & 0.48 & 0.061 & 2.6 \\
+\addlinespace
+claude-sonnet-4-6 & single-shot & 39 & 90\% & 10\% & 0.95 & 0.084 & 1.0 \\
+claude-sonnet-4-6 & tool-use & 39 & 100\% & 0\% & 0.98 & 0.016 & 2.2 \\
+claude-sonnet-4-6 & multi-agent & 39 & 95\% & 3\% & 0.96 & 0.030 & 1.1 \\
+\addlinespace
+deepseek-v3.2 & single-shot & 39 & 36\% & 18\% & 0.99 & 0.671 & 1.0 \\
+deepseek-v3.2 & tool-use & 39 & 54\% & 5\% & 0.98 & 0.279 & 3.3 \\
+deepseek-v3.2 & multi-agent & 39 & 38\% & 0\% & 0.56 & 0.195 & 2.8 \\
+\addlinespace
+qwen3.7-max & single-shot & 39 & 85\% & 8\% & 1.00 & 0.149 & 1.0 \\
+qwen3.7-max & tool-use & 39 & 95\% & 5\% & 1.00 & 0.051 & 2.3 \\
+qwen3.7-max & multi-agent & 39 & 72\% & 8\% & 0.97 & 0.252 & 1.7 \\
+\bottomrule
+\end{tabular}

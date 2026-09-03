@@ -1,0 +1,107 @@
+{
+  "id": "T2-pulley-blank",
+  "tier": 2,
+  "title": "Pulley blank with hub",
+  "units": "mm",
+  "nl_spec": "Model a pulley blank: a disc of diameter 80 mm and thickness 16 mm, with a coaxial hub of diameter 32 mm extending above the disc so that the overall height is 36 mm, and a \u00d816 mm bore through the entire part. All features coaxial.",
+  "tags": [
+    "pulley",
+    "hub",
+    "multi-feature",
+    "rotating"
+  ],
+  "reference_solution": "tasks/ref_solutions/T2-pulley-blank.py",
+  "checks": [
+    {
+      "id": "disc_od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 80,
+      "tol": 0.5,
+      "desc": "disc diameter"
+    },
+    {
+      "id": "height",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 36,
+      "tol": 0.4,
+      "desc": "overall height"
+    },
+    {
+      "id": "bore",
+      "kind": "cylinder_count",
+      "radius": 8,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d816 through-bore",
+      "height": 36,
+      "height_tol": 1.0
+    },
+    {
+      "id": "hub",
+      "kind": "cylinder_count",
+      "radius": 16,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d832 hub outer surface",
+      "height": 20,
+      "height_tol": 1.0
+    },
+    {
+      "id": "disc_rim",
+      "kind": "cylinder_count",
+      "radius": 40,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d880 disc rim",
+      "height": 16,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 82129,
+      "hi": 96413,
+      "desc": "volume within \u00b18% of nominal 89271 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    },
+    {
+      "id": "disc_low",
+      "kind": "approx",
+      "property": "com_off_z",
+      "target": -7.57,
+      "tol": 1.2,
+      "desc": "disc at the base, hub above"
+    }
+  ]
+}

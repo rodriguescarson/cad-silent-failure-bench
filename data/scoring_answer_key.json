@@ -1,0 +1,1005 @@
+[
+ {
+  "item": "001",
+  "task": "T2-flanged-bushing",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "bore",
+   "volume",
+   "flange_low"
+  ]
+ },
+ {
+  "item": "002",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "003",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume",
+   "com_y"
+  ]
+ },
+ {
+  "item": "004",
+  "task": "T2-counterbore-plate",
+  "model": "claude-sonnet-4-6",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "cbore_face"
+  ]
+ },
+ {
+  "item": "005",
+  "task": "T2-counterbore-plate",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "cbore",
+   "through"
+  ]
+ },
+ {
+  "item": "006",
+  "task": "T2-stepped-shaft",
+  "model": "qwen/qwen3.7-max",
+  "condition": "multi_agent",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "007",
+  "task": "T2-counterbore-plate",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "cbore_face"
+  ]
+ },
+ {
+  "item": "008",
+  "task": "T2-flanged-bushing",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "hub",
+   "flange_low"
+  ]
+ },
+ {
+  "item": "009",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "010",
+  "task": "T1-washer",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "multi_agent",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "thickness"
+  ]
+ },
+ {
+  "item": "011",
+  "task": "T2-lbracket",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "width",
+   "com_y",
+   "com_z"
+  ]
+ },
+ {
+  "item": "012",
+  "task": "T4-flange-8bolt-edit",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "013",
+  "task": "T4-bushing-bore-edit",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "014",
+  "task": "T1-washer",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "015",
+  "task": "T2-pulley-blank",
+  "model": "claude-sonnet-4-6",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "016",
+  "task": "T4-flange-8bolt-edit",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "017",
+  "task": "T2-counterbore-plate",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "cbore",
+   "through"
+  ]
+ },
+ {
+  "item": "018",
+  "task": "T2-pulley-blank",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "height",
+   "bore",
+   "hub"
+  ]
+ },
+ {
+  "item": "019",
+  "task": "T2-stepped-shaft",
+  "model": "claude-sonnet-4-6",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "length",
+   "seats",
+   "volume"
+  ]
+ },
+ {
+  "item": "020",
+  "task": "T2-stepped-shaft",
+  "model": "claude-sonnet-4-6",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "021",
+  "task": "T2-counterbore-plate",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "cbore"
+  ]
+ },
+ {
+  "item": "022",
+  "task": "T2-counterbore-plate",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "cbore",
+   "through"
+  ]
+ },
+ {
+  "item": "023",
+  "task": "T2-lbracket",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "depth",
+   "holes",
+   "volume",
+   "com_y"
+  ]
+ },
+ {
+  "item": "024",
+  "task": "T2-stepped-shaft",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "seats",
+   "volume",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "025",
+  "task": "T2-lbracket",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume",
+   "com_y"
+  ]
+ },
+ {
+  "item": "026",
+  "task": "T1-flange-6bolt",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "027",
+  "task": "T1-washer",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "028",
+  "task": "T1-washer",
+  "model": "claude-haiku-4-5",
+  "condition": "multi_agent",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "bore",
+   "volume"
+  ]
+ },
+ {
+  "item": "029",
+  "task": "T2-counterbore-plate",
+  "model": "qwen/qwen3.7-max",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "030",
+  "task": "T4-bushing-bore-edit",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "031",
+  "task": "T1-washer",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "032",
+  "task": "T2-counterbore-plate",
+  "model": "claude-haiku-4-5",
+  "condition": "multi_agent",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "033",
+  "task": "T2-stepped-shaft",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "034",
+  "task": "T4-flange-8bolt-edit",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "035",
+  "task": "T2-counterbore-plate",
+  "model": "claude-sonnet-4-6",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "cbore",
+   "through"
+  ]
+ },
+ {
+  "item": "036",
+  "task": "T1-plate-4holes",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "thickness",
+   "holes"
+  ]
+ },
+ {
+  "item": "037",
+  "task": "T2-flanged-bushing",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "length",
+   "bore",
+   "hub",
+   "flange_low"
+  ]
+ },
+ {
+  "item": "038",
+  "task": "T2-pulley-blank",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "height",
+   "bore",
+   "hub"
+  ]
+ },
+ {
+  "item": "039",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "040",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "041",
+  "task": "T4-bushing-bore-edit",
+  "model": "qwen/qwen3.7-max",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "042",
+  "task": "T2-pulley-blank",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "bore"
+  ]
+ },
+ {
+  "item": "043",
+  "task": "T2-flanged-bushing",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "bore",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "044",
+  "task": "T1-bushing",
+  "model": "claude-sonnet-4-6",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "045",
+  "task": "T4-flange-8bolt-edit",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "046",
+  "task": "T2-stepped-pin",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "length",
+   "step2",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "047",
+  "task": "T2-lbracket",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "depth",
+   "height",
+   "holes",
+   "volume",
+   "com_y"
+  ]
+ },
+ {
+  "item": "048",
+  "task": "T2-counterbore-plate",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "cbore",
+   "through"
+  ]
+ },
+ {
+  "item": "049",
+  "task": "T2-flanged-bushing",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "length",
+   "bore",
+   "hub",
+   "flange_low"
+  ]
+ },
+ {
+  "item": "050",
+  "task": "T2-stepped-pin",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "multi_agent",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "051",
+  "task": "T2-counterbore-plate",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "multi_agent",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "052",
+  "task": "T1-flange-6bolt",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "bolts"
+  ]
+ },
+ {
+  "item": "053",
+  "task": "T2-lbracket",
+  "model": "claude-sonnet-4-6",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "holes"
+  ]
+ },
+ {
+  "item": "054",
+  "task": "T2-counterbore-plate",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "cbore"
+  ]
+ },
+ {
+  "item": "055",
+  "task": "T2-lbracket",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "holes",
+   "com_y",
+   "com_z"
+  ]
+ },
+ {
+  "item": "056",
+  "task": "T2-stepped-pin",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "step2",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "057",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "multi_agent",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "058",
+  "task": "T1-plate-4holes",
+  "model": "claude-sonnet-4-6",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "059",
+  "task": "T1-washer",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "060",
+  "task": "T2-lbracket",
+  "model": "claude-sonnet-4-6",
+  "condition": "multi_agent",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "061",
+  "task": "T1-bushing",
+  "model": "claude-sonnet-4-6",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "062",
+  "task": "T1-plate-4holes",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "holes"
+  ]
+ },
+ {
+  "item": "063",
+  "task": "T1-collar",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "bore",
+   "volume"
+  ]
+ },
+ {
+  "item": "064",
+  "task": "T1-flange-6bolt",
+  "model": "claude-sonnet-4-6",
+  "condition": "multi_agent",
+  "seed": 1,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "065",
+  "task": "T2-lbracket",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "width",
+   "depth",
+   "height",
+   "holes",
+   "com_y",
+   "com_z"
+  ]
+ },
+ {
+  "item": "066",
+  "task": "T2-lbracket",
+  "model": "claude-sonnet-4-6",
+  "condition": "multi_agent",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "holes",
+   "com_y"
+  ]
+ },
+ {
+  "item": "067",
+  "task": "T2-stepped-pin",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "step2",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "068",
+  "task": "T2-stepped-pin",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "step2",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "069",
+  "task": "T2-pulley-blank",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "height",
+   "bore",
+   "hub"
+  ]
+ },
+ {
+  "item": "070",
+  "task": "T2-flanged-bushing",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "bore",
+   "hub",
+   "flange_low"
+  ]
+ },
+ {
+  "item": "071",
+  "task": "T2-lbracket",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "holes",
+   "one_solid",
+   "com_y"
+  ]
+ },
+ {
+  "item": "072",
+  "task": "T2-stepped-pin",
+  "model": "claude-haiku-4-5",
+  "condition": "single_shot",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "length",
+   "step2",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "073",
+  "task": "T2-pulley-blank",
+  "model": "qwen/qwen3.7-max",
+  "condition": "multi_agent",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "074",
+  "task": "T2-stepped-shaft",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "one_solid"
+  ]
+ },
+ {
+  "item": "075",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "multi_agent",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "com_y"
+  ]
+ },
+ {
+  "item": "076",
+  "task": "T2-lbracket",
+  "model": "claude-sonnet-4-6",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": true,
+  "silent": false,
+  "failed_checks": []
+ },
+ {
+  "item": "077",
+  "task": "T2-pulley-blank",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "height",
+   "bore",
+   "hub"
+  ]
+ },
+ {
+  "item": "078",
+  "task": "T2-stepped-shaft",
+  "model": "claude-haiku-4-5",
+  "condition": "tool_use",
+  "seed": 0,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "length",
+   "seats",
+   "volume",
+   "one_solid"
+  ]
+ },
+ {
+  "item": "079",
+  "task": "T2-lbracket",
+  "model": "qwen/qwen3.7-max",
+  "condition": "multi_agent",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "depth",
+   "volume"
+  ]
+ },
+ {
+  "item": "080",
+  "task": "T1-plate-4holes",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "single_shot",
+  "seed": 1,
+  "grader_passed": false,
+  "silent": true,
+  "failed_checks": [
+   "holes"
+  ]
+ },
+ {
+  "item": "081",
+  "task": "T1-collar",
+  "model": "deepseek/deepseek-v3.2",
+  "condition": "tool_use",
+  "seed": 2,
+  "grader_passed": false,
+  "silent": false,
+  "failed_checks": [
+   "bore",
+   "volume"
+  ]
+ }
+]

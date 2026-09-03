@@ -1,0 +1,88 @@
+{
+  "id": "T2-lbracket",
+  "tier": 2,
+  "title": "L-bracket with one hole per leg",
+  "units": "mm",
+  "nl_spec": "Model an L-bracket from two rectangular plates, both 8 mm thick: a horizontal base plate 60 mm x 40 mm, and a vertical wall 60 mm wide rising from one 60 mm edge of the base to an overall height of 40 mm. Drill one \u00d88 mm hole through the base plate (vertical axis), centred 30 mm along the width and 28 mm from the wall; and one \u00d88 mm hole through the vertical wall (horizontal axis), centred 30 mm along the width and 24 mm above the base bottom.",
+  "tags": [
+    "bracket",
+    "multi-feature",
+    "non-coaxial",
+    "structural"
+  ],
+  "reference_solution": "tasks/ref_solutions/T2-lbracket.py",
+  "spec_ambiguity_note": "The run-time nl_spec above is the historical stimulus and is left unchanged. Post-hoc, expert scoring surfaced two readings of the base depth: overall 40 mm (8 mm wall inside the 60x40 footprint, the reference/grader reading) vs 48 mm (wall added outboard). Resolved to the 40 mm overall reading per heel-to-toe angle-bracket convention and internal consistency with the stated 'overall height'. See notes/lbracket-spec-decision.md. Clarified wording for any re-run: 'two 8 mm legs sharing a common corner; overall footprint 60 (width) x 40 (depth) mm and overall height 40 mm, both legs within these overall dimensions (wall not added outboard).'",
+  "checks": [
+    {
+      "id": "width",
+      "kind": "approx",
+      "property": "bbox_x",
+      "target": 60,
+      "tol": 0.5,
+      "desc": "bracket width"
+    },
+    {
+      "id": "depth",
+      "kind": "approx",
+      "property": "bbox_y",
+      "target": 40,
+      "tol": 0.5,
+      "desc": "base depth"
+    },
+    {
+      "id": "height",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 40,
+      "tol": 0.5,
+      "desc": "overall height"
+    },
+    {
+      "id": "holes",
+      "kind": "cylinder_count",
+      "radius": 4,
+      "radius_tol": 0.3,
+      "target": 2,
+      "desc": "two \u00d88 holes (different axes)",
+      "height": 8,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 31056,
+      "hi": 36456,
+      "desc": "volume within \u00b18% of nominal 33756 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "com_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": -7.19,
+      "tol": 1.0,
+      "desc": "wall on the y=0 side (catches mirrored bracket)"
+    },
+    {
+      "id": "com_z",
+      "kind": "approx",
+      "property": "com_off_z",
+      "target": -7.14,
+      "tol": 1.0,
+      "desc": "base at the bottom"
+    }
+  ]
+}

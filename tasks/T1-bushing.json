@@ -1,0 +1,88 @@
+{
+  "id": "T1-bushing",
+  "tier": 1,
+  "title": "Plain cylindrical bushing",
+  "units": "mm",
+  "nl_spec": "Model a plain cylindrical bushing (sleeve): outside diameter 30 mm, bore diameter 20 mm, overall length 40 mm.",
+  "tags": [
+    "bushing",
+    "single-feature",
+    "tube"
+  ],
+  "reference_solution": "tasks/ref_solutions/T1-bushing.py",
+  "checks": [
+    {
+      "id": "od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 30,
+      "tol": 0.4,
+      "desc": "outside diameter"
+    },
+    {
+      "id": "length",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 40,
+      "tol": 0.4,
+      "desc": "overall length"
+    },
+    {
+      "id": "bore",
+      "kind": "cylinder_count",
+      "radius": 10,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d820 bore",
+      "height": 40,
+      "height_tol": 1.0
+    },
+    {
+      "id": "outer",
+      "kind": "cylinder_count",
+      "radius": 15,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d830 outer surface",
+      "height": 40,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 14451,
+      "hi": 16965,
+      "desc": "volume within \u00b18% of nominal 15708 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

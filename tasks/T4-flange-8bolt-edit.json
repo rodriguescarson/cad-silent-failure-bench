@@ -1,0 +1,93 @@
+{
+  "id": "T4-flange-8bolt-edit",
+  "tier": 4,
+  "title": "Edit: re-pattern flange to 8 bolts",
+  "units": "mm",
+  "nl_spec": "Below is existing build123d code for a pipe flange. Modify it so the bolt pattern has EIGHT equally spaced \u00d811 mm holes on the same 95 mm pitch-circle diameter, keeping every other dimension unchanged (OD 120, bore \u00d840, thickness 14).\n\n```python\nfrom build123d import BuildPart, Cylinder, Locations, Mode, PolarLocations\n\nwith BuildPart() as flange:\n    Cylinder(radius=60, height=14)\n    Cylinder(radius=20, height=14, mode=Mode.SUBTRACT)\n    with PolarLocations(radius=47.5, count=6):\n        Cylinder(radius=5.5, height=14, mode=Mode.SUBTRACT)\n\nresult = flange.part\n```",
+  "tags": [
+    "edit",
+    "flange",
+    "bolt-pattern",
+    "constraint"
+  ],
+  "reference_solution": "tasks/ref_solutions/T4-flange-8bolt-edit.py",
+  "checks": [
+    {
+      "id": "od",
+      "kind": "approx",
+      "property": "bbox_xy_max",
+      "target": 120,
+      "tol": 0.5,
+      "desc": "OD unchanged"
+    },
+    {
+      "id": "thickness",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 14,
+      "tol": 0.2,
+      "desc": "thickness unchanged"
+    },
+    {
+      "id": "bore",
+      "kind": "cylinder_count",
+      "radius": 20,
+      "radius_tol": 0.4,
+      "target": 1,
+      "desc": "\u00d840 bore unchanged",
+      "height": 14,
+      "height_tol": 1.0
+    },
+    {
+      "id": "bolts",
+      "kind": "bolt_circle",
+      "radius": 5.5,
+      "radius_tol": 0.3,
+      "target": 8,
+      "pcd": 95,
+      "pcd_tol": 1.0,
+      "desc": "8x \u00d811 on 95 PCD",
+      "height": 14,
+      "height_tol": 1.0,
+      "center_tol": 1.5,
+      "ang_tol": 8.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 119692,
+      "hi": 140508,
+      "desc": "volume within \u00b18% of nominal 130100 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    }
+  ]
+}

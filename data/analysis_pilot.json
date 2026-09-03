@@ -1,0 +1,299 @@
+{
+ "glob": "pilot_*.jsonl",
+ "n": 60,
+ "models": [
+  "claude-haiku-4-5",
+  "claude-sonnet-4-6",
+  "deepseek/deepseek-v3.2",
+  "openai/gpt-5.5",
+  "qwen/qwen3.7-max"
+ ],
+ "by_condition": {
+  "single_shot": {
+   "n": 30,
+   "success": 0.5,
+   "silent": 0.13333333333333333,
+   "loud": 0.36666666666666664,
+   "done_rate": 1.0,
+   "mean_conf": 0.9720689655172412,
+   "mean_steps": 1.0,
+   "ece": 0.45482758620689656,
+   "auroc": 0.6309523809523809,
+   "brier": 0.4460448275862069
+  },
+  "tool_use": {
+   "n": 30,
+   "success": 0.8666666666666667,
+   "silent": 0.0,
+   "loud": 0.13333333333333333,
+   "done_rate": 0.8,
+   "mean_conf": 0.98,
+   "mean_steps": 2.9,
+   "ece": 0.019999999999999973,
+   "auroc": null,
+   "brier": 0.0008416666666666673
+  },
+  "multi_agent": {
+   "n": 0
+  }
+ },
+ "by_model_condition": {
+  "claude-haiku-4-5": {
+   "single_shot": {
+    "n": 6,
+    "success": 0.0,
+    "silent": 0.3333333333333333,
+    "loud": 0.6666666666666666,
+    "done_rate": 1.0,
+    "mean_conf": 0.9183333333333333,
+    "mean_steps": 1.0,
+    "ece": 0.9183333333333332,
+    "auroc": null,
+    "brier": 0.84445
+   },
+   "tool_use": {
+    "n": 6,
+    "success": 0.6666666666666666,
+    "silent": 0.0,
+    "loud": 0.3333333333333333,
+    "done_rate": 0.6666666666666666,
+    "mean_conf": 0.9425000000000001,
+    "mean_steps": 3.3333333333333335,
+    "ece": null,
+    "auroc": null,
+    "brier": 0.0034750000000000015
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  },
+  "claude-sonnet-4-6": {
+   "single_shot": {
+    "n": 6,
+    "success": 0.8333333333333334,
+    "silent": 0.16666666666666666,
+    "loud": 0.0,
+    "done_rate": 1.0,
+    "mean_conf": 0.9716666666666666,
+    "mean_steps": 1.0,
+    "ece": 0.175,
+    "auroc": 0.6,
+    "brier": 0.15748333333333334
+   },
+   "tool_use": {
+    "n": 6,
+    "success": 1.0,
+    "silent": 0.0,
+    "loud": 0.0,
+    "done_rate": 1.0,
+    "mean_conf": 0.9783333333333334,
+    "mean_steps": 2.0,
+    "ece": 0.021666666666666685,
+    "auroc": null,
+    "brier": 0.0005166666666666676
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  },
+  "deepseek/deepseek-v3.2": {
+   "single_shot": {
+    "n": 6,
+    "success": 0.16666666666666666,
+    "silent": 0.16666666666666666,
+    "loud": 0.6666666666666666,
+    "done_rate": 1.0,
+    "mean_conf": 0.998,
+    "mean_steps": 1.0,
+    "ece": 0.798,
+    "auroc": 0.625,
+    "brier": 0.7960200000000001
+   },
+   "tool_use": {
+    "n": 6,
+    "success": 0.6666666666666666,
+    "silent": 0.0,
+    "loud": 0.3333333333333333,
+    "done_rate": 0.5,
+    "mean_conf": 0.98,
+    "mean_steps": 3.6666666666666665,
+    "ece": null,
+    "auroc": null,
+    "brier": 0.0008666666666666683
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  },
+  "openai/gpt-5.5": {
+   "single_shot": {
+    "n": 6,
+    "success": 0.6666666666666666,
+    "silent": 0.0,
+    "loud": 0.3333333333333333,
+    "done_rate": 1.0,
+    "mean_conf": 0.9766666666666667,
+    "mean_steps": 1.0,
+    "ece": 0.3466666666666667,
+    "auroc": 0.0625,
+    "brier": 0.32393333333333335
+   },
+   "tool_use": {
+    "n": 6,
+    "success": 1.0,
+    "silent": 0.0,
+    "loud": 0.0,
+    "done_rate": 1.0,
+    "mean_conf": 0.9900000000000001,
+    "mean_steps": 2.6666666666666665,
+    "ece": 0.010000000000000009,
+    "auroc": null,
+    "brier": 0.00010000000000000017
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  },
+  "qwen/qwen3.7-max": {
+   "single_shot": {
+    "n": 6,
+    "success": 0.8333333333333334,
+    "silent": 0.0,
+    "loud": 0.16666666666666666,
+    "done_rate": 1.0,
+    "mean_conf": 1.0,
+    "mean_steps": 1.0,
+    "ece": 0.16666666666666666,
+    "auroc": 0.5,
+    "brier": 0.16666666666666666
+   },
+   "tool_use": {
+    "n": 6,
+    "success": 1.0,
+    "silent": 0.0,
+    "loud": 0.0,
+    "done_rate": 0.8333333333333334,
+    "mean_conf": 1.0,
+    "mean_steps": 2.8333333333333335,
+    "ece": 0.0,
+    "auroc": null,
+    "brier": 0.0
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  }
+ },
+ "by_tier_condition": {
+  "1": {
+   "single_shot": {
+    "n": 15,
+    "success": 0.5333333333333333,
+    "silent": 0.06666666666666667,
+    "loud": 0.4,
+    "done_rate": 1.0,
+    "mean_conf": 0.9707142857142859,
+    "mean_steps": 1.0,
+    "ece": 0.4107142857142858,
+    "auroc": 0.6875,
+    "brier": 0.39172142857142855
+   },
+   "tool_use": {
+    "n": 15,
+    "success": 1.0,
+    "silent": 0.0,
+    "loud": 0.0,
+    "done_rate": 0.9333333333333333,
+    "mean_conf": 0.9771428571428572,
+    "mean_steps": 2.8,
+    "ece": 0.02285714285714286,
+    "auroc": null,
+    "brier": 0.0010857142857142864
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  },
+  "2": {
+   "single_shot": {
+    "n": 15,
+    "success": 0.4666666666666667,
+    "silent": 0.2,
+    "loud": 0.3333333333333333,
+    "done_rate": 1.0,
+    "mean_conf": 0.9733333333333334,
+    "mean_steps": 1.0,
+    "ece": 0.5186666666666667,
+    "auroc": 0.5982142857142857,
+    "brier": 0.4967466666666666
+   },
+   "tool_use": {
+    "n": 15,
+    "success": 0.7333333333333333,
+    "silent": 0.0,
+    "loud": 0.26666666666666666,
+    "done_rate": 0.6666666666666666,
+    "mean_conf": 0.984,
+    "mean_steps": 3.0,
+    "ece": 0.016000000000000014,
+    "auroc": null,
+    "brier": 0.0005000000000000009
+   },
+   "multi_agent": {
+    "n": 0
+   }
+  }
+ },
+ "success_at_k": 0.85,
+ "pass_hat_k": 0.55,
+ "cds": {
+  "n_episodes": 0,
+  "mean_pass": null,
+  "mean_fail": null,
+  "n_pass": 0,
+  "n_fail": 0
+ },
+ "silent_failures": {
+  "n": 4,
+  "mean_conf": 0.94,
+  "min_conf": 0.85
+ },
+ "error_modes_failed_attempts": {
+  "no_code": 0,
+  "execution_error": 13,
+  "invalid_solid": 0,
+  "feature_count": 17,
+  "dimension": 18,
+  "volume_constraint": 13,
+  "n_failed": 19
+ },
+ "error_modes_by_condition": {
+  "single_shot": {
+   "no_code": 0,
+   "execution_error": 11,
+   "invalid_solid": 0,
+   "feature_count": 13,
+   "dimension": 14,
+   "volume_constraint": 11,
+   "n_failed": 15
+  },
+  "tool_use": {
+   "no_code": 0,
+   "execution_error": 2,
+   "invalid_solid": 0,
+   "feature_count": 4,
+   "dimension": 4,
+   "volume_constraint": 2,
+   "n_failed": 4
+  },
+  "multi_agent": {
+   "no_code": 0,
+   "execution_error": 0,
+   "invalid_solid": 0,
+   "feature_count": 0,
+   "dimension": 0,
+   "volume_constraint": 0,
+   "n_failed": 0
+  }
+ }
+}

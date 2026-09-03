@@ -1,0 +1,104 @@
+{
+  "id": "T2-counterbore-plate",
+  "tier": 2,
+  "title": "Plate with central counterbored hole",
+  "units": "mm",
+  "nl_spec": "Model a square plate 70 mm x 70 mm, 12 mm thick, with a single counterbored hole at its centre: the through-hole is \u00d811 mm, and the counterbore is \u00d820 mm, 6 mm deep, machined from the top face.",
+  "tags": [
+    "plate",
+    "counterbore",
+    "multi-feature"
+  ],
+  "reference_solution": "tasks/ref_solutions/T2-counterbore-plate.py",
+  "checks": [
+    {
+      "id": "side_x",
+      "kind": "approx",
+      "property": "bbox_x",
+      "target": 70,
+      "tol": 0.5,
+      "desc": "plate side X"
+    },
+    {
+      "id": "side_y",
+      "kind": "approx",
+      "property": "bbox_y",
+      "target": 70,
+      "tol": 0.5,
+      "desc": "plate side Y"
+    },
+    {
+      "id": "thickness",
+      "kind": "approx",
+      "property": "bbox_z",
+      "target": 12,
+      "tol": 0.2,
+      "desc": "thickness"
+    },
+    {
+      "id": "cbore",
+      "kind": "cylinder_count",
+      "radius": 10,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d820 counterbore wall",
+      "height": 6,
+      "height_tol": 1.0
+    },
+    {
+      "id": "through",
+      "kind": "cylinder_count",
+      "radius": 5.5,
+      "radius_tol": 0.3,
+      "target": 1,
+      "desc": "\u00d811 through section",
+      "height": 6,
+      "height_tol": 1.0
+    },
+    {
+      "id": "volume",
+      "kind": "range",
+      "property": "volume",
+      "lo": 51837,
+      "hi": 60853,
+      "desc": "volume within \u00b18% of nominal 56345 mm^3"
+    },
+    {
+      "id": "solid",
+      "kind": "true",
+      "property": "valid_solid",
+      "desc": "valid B-rep solid"
+    },
+    {
+      "id": "one_solid",
+      "kind": "equal",
+      "property": "solid_count",
+      "target": 1,
+      "desc": "exactly one solid body"
+    },
+    {
+      "id": "centered",
+      "kind": "approx",
+      "property": "com_off_x",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (x)"
+    },
+    {
+      "id": "centered_y",
+      "kind": "approx",
+      "property": "com_off_y",
+      "target": 0,
+      "tol": 0.5,
+      "desc": "mass centre on the part axis (y)"
+    },
+    {
+      "id": "cbore_face",
+      "kind": "approx",
+      "property": "com_off_z",
+      "target": -0.07,
+      "tol": 0.1,
+      "desc": "counterbore from the TOP face (mass centre sits low)"
+    }
+  ]
+}

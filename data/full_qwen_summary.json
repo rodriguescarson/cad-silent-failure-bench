@@ -1,0 +1,32 @@
+{
+  "n": 104,
+  "overall": {
+    "success_rate": 0.8173,
+    "success_at_k": 0.9429,
+    "silent_failure_rate": 0.0769,
+    "ece": 0.16951923076923076
+  },
+  "by_condition": {
+    "multi_agent": {
+      "success_rate": 0.7179,
+      "silent_failure_rate": 0.0769,
+      "mean_steps": 1.67
+    },
+    "single_shot": {
+      "success_rate": 0.8462,
+      "silent_failure_rate": 0.0769,
+      "mean_steps": 1
+    },
+    "tool_use": {
+      "success_rate": 0.9231,
+      "silent_failure_rate": 0.0769,
+      "mean_steps": 2.15
+    }
+  },
+  "by_model": {
+    "qwen/qwen3.7-max": {
+      "success_rate": 0.8173,
+      "silent_failure_rate": 0.0769
+    }
+  }
+}

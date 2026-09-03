@@ -1,0 +1,22 @@
+{
+  "n": 2,
+  "overall": {
+    "success_rate": 0.5,
+    "success_at_k": 0.5,
+    "silent_failure_rate": 0.0,
+    "ece": 0.020000000000000018
+  },
+  "by_condition": {
+    "multi_agent": {
+      "success_rate": 0.5,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 2
+    }
+  },
+  "by_model": {
+    "claude-haiku-4-5": {
+      "success_rate": 0.5,
+      "silent_failure_rate": 0.0
+    }
+  }
+}

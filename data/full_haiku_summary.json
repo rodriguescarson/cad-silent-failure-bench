@@ -1,0 +1,32 @@
+{
+  "n": 117,
+  "overall": {
+    "success_rate": 0.5983,
+    "success_at_k": 0.7436,
+    "silent_failure_rate": 0.0769,
+    "ece": 0.184059405940594
+  },
+  "by_condition": {
+    "multi_agent": {
+      "success_rate": 0.4103,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 2.59
+    },
+    "single_shot": {
+      "success_rate": 0.5128,
+      "silent_failure_rate": 0.1538,
+      "mean_steps": 1
+    },
+    "tool_use": {
+      "success_rate": 0.8718,
+      "silent_failure_rate": 0.0769,
+      "mean_steps": 2.74
+    }
+  },
+  "by_model": {
+    "claude-haiku-4-5": {
+      "success_rate": 0.5983,
+      "silent_failure_rate": 0.0769
+    }
+  }
+}
