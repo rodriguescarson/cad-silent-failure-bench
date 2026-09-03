@@ -1,5 +1,7 @@
 # cad-silent-failure-bench
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22286324.svg)](https://doi.org/10.5281/zenodo.22286324)
+
 Benchmark, harness, and full attempt corpus for
 
 > **Done Is Not Correct: Measuring Silent Failures and Self-Verification Calibration When LLM

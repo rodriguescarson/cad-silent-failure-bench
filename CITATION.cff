@@ -4,6 +4,7 @@ title: "Done Is Not Correct: Measuring Silent Failures and Self-Verification Cal
 version: "1.0"
 date-released: "2026-09-03"
 license: MIT
+doi: 10.5281/zenodo.22286324
 authors:
   - family-names: Rodrigues
     given-names: Carson
