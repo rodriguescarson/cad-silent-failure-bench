@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this benchmark or its records, please cite the paper."
 title: "Done Is Not Correct: Measuring Silent Failures and Self-Verification Calibration When LLM Agents Take CAD Actions (benchmark v1.0)"
-version: "1.0"
-date-released: "2026-09-03"
+version: "1.1"
+date-released: 2026-09-04
 license: MIT
 doi: 10.5281/zenodo.22286324
 authors:

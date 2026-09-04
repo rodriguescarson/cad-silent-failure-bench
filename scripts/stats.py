@@ -233,18 +233,37 @@ def main() -> int:
     except Exception as e:
         out["gee_error"] = str(e)[:200]
 
-    # loophole ABLATION: legacy claim contract vs fixed, IDENTICAL feedback (haiku+deepseek)
+    # loophole ABLATION: legacy claim contract vs fixed, IDENTICAL feedback, all four models
+    # (sonnet's legacy arm was run through OpenRouter, so its model id carries a vendor prefix)
+    norm = lambda m: m.replace("anthropic/", "")
     abl = load("ablation_legacy_*.jsonl")
-    abl_fixed = [r for r in rerun_tu
-                 if r["model"] in {"claude-haiku-4-5", "deepseek/deepseek-v3.2"}]
+    abl = [r for r in abl if norm(r["model"]) in COMPLETE]
+    abl_models = {norm(r["model"]) for r in abl}
+    abl_fixed = [r for r in rerun_tu if norm(r["model"]) in abl_models]
     if abl:
         ls, ln = sum(silent(r) for r in abl), len(abl)
         fs, fn = sum(silent(r) for r in abl_fixed), len(abl_fixed)
+        lc = [r for r in abl if r.get("reported_done")]
+        fc = [r for r in abl_fixed if r.get("reported_done")]
+        lcp, fcp = sum(r["passed"] for r in lc), sum(r["passed"] for r in fc)
+        per_model = {}
+        for m in sorted(abl_models):
+            L = [r for r in abl if norm(r["model"]) == m]
+            F = [r for r in abl_fixed if norm(r["model"]) == m]
+            per_model[m] = {"legacy_silent": sum(silent(r) for r in L), "fixed_silent": sum(silent(r) for r in F),
+                            "legacy_success": sum(r["passed"] for r in L), "fixed_success": sum(r["passed"] for r in F),
+                            "n": len(L)}
         out["ablation_claim_contract"] = {
+            "models": sorted(abl_models),
             "legacy_silent": ls, "legacy_n": ln, "fixed_silent": fs, "fixed_n": fn,
-            "fisher_p": round(float(sps.fisher_exact([[ls, ln - ls], [fs, fn - fs]]).pvalue), 5),
+            "fisher_p_silent": round(float(sps.fisher_exact([[ls, ln - ls], [fs, fn - fs]]).pvalue), 5),
+            "legacy_claim_precision": round(lcp / len(lc), 4) if lc else None,
+            "fixed_claim_precision": round(fcp / len(fc), 4) if fc else None,
+            "fisher_p_claim_precision": round(float(sps.fisher_exact([[lcp, len(lc) - lcp], [fcp, len(fc) - fcp]]).pvalue), 12),
             "legacy_success": round(rate(abl, lambda r: r["passed"]), 4),
             "fixed_success": round(rate(abl_fixed, lambda r: r["passed"]), 4),
+            "fisher_p_success": round(float(sps.fisher_exact([[sum(r["passed"] for r in abl), ln - sum(r["passed"] for r in abl)], [sum(r["passed"] for r in abl_fixed), fn - sum(r["passed"] for r in abl_fixed)]]).pvalue), 5),
+            "per_model": per_model,
         }
 
     # sensitivity: old (buggy-protocol) vs new tool-use

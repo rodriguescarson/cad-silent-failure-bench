@@ -1,0 +1,22 @@
+{
+  "n": 39,
+  "overall": {
+    "success_rate": 0.7179,
+    "success_at_k": 1.0,
+    "silent_failure_rate": 0.0,
+    "ece": 0.256578947368421
+  },
+  "by_condition": {
+    "tool_use_legacy": {
+      "success_rate": 0.7179,
+      "silent_failure_rate": 0.0,
+      "mean_steps": 1.23
+    }
+  },
+  "by_model": {
+    "qwen/qwen3.7-max": {
+      "success_rate": 0.7179,
+      "silent_failure_rate": 0.0
+    }
+  }
+}

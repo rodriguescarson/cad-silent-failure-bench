@@ -234,13 +234,53 @@
   }
  },
  "ablation_claim_contract": {
-  "legacy_silent": 10,
-  "legacy_n": 78,
-  "fixed_silent": 3,
-  "fixed_n": 78,
-  "fisher_p": 0.07883,
-  "legacy_success": 0.4744,
-  "fixed_success": 0.5769
+  "models": [
+   "claude-haiku-4-5",
+   "claude-sonnet-4-6",
+   "deepseek/deepseek-v3.2",
+   "qwen/qwen3.7-max"
+  ],
+  "legacy_silent": 14,
+  "legacy_n": 156,
+  "fixed_silent": 5,
+  "fixed_n": 156,
+  "fisher_p_silent": 0.05567,
+  "legacy_claim_precision": 0.6757,
+  "fixed_claim_precision": 0.9603,
+  "fisher_p_claim_precision": 4.5e-10,
+  "legacy_success": 0.641,
+  "fixed_success": 0.7756,
+  "fisher_p_success": 0.01251,
+  "per_model": {
+   "claude-haiku-4-5": {
+    "legacy_silent": 6,
+    "fixed_silent": 1,
+    "legacy_success": 21,
+    "fixed_success": 24,
+    "n": 39
+   },
+   "claude-sonnet-4-6": {
+    "legacy_silent": 4,
+    "fixed_silent": 0,
+    "legacy_success": 35,
+    "fixed_success": 39,
+    "n": 39
+   },
+   "deepseek/deepseek-v3.2": {
+    "legacy_silent": 4,
+    "fixed_silent": 2,
+    "legacy_success": 16,
+    "fixed_success": 21,
+    "n": 39
+   },
+   "qwen/qwen3.7-max": {
+    "legacy_silent": 0,
+    "fixed_silent": 2,
+    "legacy_success": 28,
+    "fixed_success": 37,
+    "n": 39
+   }
+  }
  },
  "tool_use_protocol_sensitivity": {
   "old": {

@@ -1,0 +1,22 @@
+{
+  "n": 39,
+  "overall": {
+    "success_rate": 0.8974,
+    "success_at_k": 1.0,
+    "silent_failure_rate": 0.1026,
+    "ece": 0.0635897435897436
+  },
+  "by_condition": {
+    "tool_use_legacy": {
+      "success_rate": 0.8974,
+      "silent_failure_rate": 0.1026,
+      "mean_steps": 1
+    }
+  },
+  "by_model": {
+    "anthropic/claude-sonnet-4-6": {
+      "success_rate": 0.8974,
+      "silent_failure_rate": 0.1026
+    }
+  }
+}

@@ -23,7 +23,7 @@ later versions ship as tagged releases.
 | `tasks/ref_solutions/` | reference build123d solutions (calibration gate; never shown to agents) | CC BY 4.0 |
 | `benchmark/` | schema, grader, kernel executor and property extractor, single-shot / tool-use / multi-agent harnesses, runner | MIT |
 | `scripts/` | `regrade.py`, `stats.py`, `analyze.py`, `tolerance_sensitivity.py`, `expert_kappa.py`, `build_site.py`, `calibrate.py` | MIT |
-| `data/*.jsonl` | every graded attempt: 519 full-population attempts (`regraded_full_*`), 156 fixed-protocol tool-use attempts (`rerun_tu_*`), 78 ablation attempts (`ablation_legacy_*`), 60 pilot attempts; `primary_population.jsonl` is the 468-attempt primary population | CC BY 4.0 |
+| `data/*.jsonl` | every graded attempt: 519 full-population attempts (`regraded_full_*`), 156 fixed-protocol tool-use attempts (`rerun_tu_*`), 156 ablation attempts (`ablation_legacy_*`, all four models), 60 pilot attempts; `primary_population.jsonl` is the 468-attempt primary population | CC BY 4.0 |
 | `data/*.transcripts.jsonl` | full multi-turn transcripts for the 234 fixed-protocol tool-use and ablation attempts | CC BY 4.0 |
 | `data/primary_props.json` | measured-properties dictionary for every unique primary-population code (lets you regrade without the kernel) | CC BY 4.0 |
 | `data/stats.json`, `data/analysis.json`, `data/tolerance_sensitivity.json`, `data/expert_kappa.json` | every number in the paper | CC BY 4.0 |
