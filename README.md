@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22286324.svg)](https://doi.org/10.5281/zenodo.22286324)
 
+Versions on Zenodo: v1.0 = 10.5281/zenodo.22286324 (the DOI cited in the paper); v1.1 = 10.5281/zenodo.22312792 (four-model ablation, tolerance sensitivity; four archives, unzip all into one directory).
+
 Benchmark, harness, and full attempt corpus for
 
 > **Done Is Not Correct: Measuring Silent Failures and Self-Verification Calibration When LLM

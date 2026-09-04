@@ -8,7 +8,7 @@ paper reports and is frozen; changes ship as new tagged versions with their own 
 |---|---|---|---|
 | (none yet) | | | |
 
-## v1.1 (2026-09-04)
+## v1.1 (2026-09-04; Zenodo version DOI 10.5281/zenodo.22312792, published 2026-09-05)
 
 - Claim-contract ablation extended from two models (haiku, deepseek; n = 78) to all four
   (`data/ablation_legacy_sonnet.jsonl`, `data/ablation_legacy_qwen.jsonl`; n = 156). Sonnet's
